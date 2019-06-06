@@ -1,0 +1,41 @@
+serverConfig:
+  hostname: localhost
+  port: 8080
+
+dbConfig:
+  url: jdbc:postgresql://localhost/pinmap
+  username: postgres
+  password: pinmap
+
+sampleConfig:
+  baseTableName: tweets1
+  baseTableColumnNames:
+    - id
+    - create_at
+    - x
+    - y
+  baseTableSize: 1026036
+  sampleTableName: s_tweets1
+  sampleTableColumnNames:
+    - id
+    - create_at
+    - x
+    - y
+  sampleTableColumnTypes:
+    - bigint
+    - timestamp
+    - double
+    - double
+
+seekConfig:
+  pkey: id
+  measures:
+    - x
+    - y
+  dimensions:
+    - id
+    - create_at
+  dimensionTypes:
+    - NUMERICAL
+    - NUMERICAL
+  epsilon: 0.05
