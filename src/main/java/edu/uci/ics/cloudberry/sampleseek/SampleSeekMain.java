@@ -159,7 +159,7 @@ public class SampleSeekMain extends AllDirectives {
             System.err.println("Please indicate config file path.\nUsage: --config [file] or -c [file].\n");
             //return;
             System.err.println("Use default config file path: ./src/sampleseek.yaml\n");
-            configFilePath = "/Users/white/IdeaProjects/sampleseek/src/sampleseek.yaml";
+            configFilePath = "/Users/josephzheng/Desktop/UCI资料/Chen Li Research/SampleSeek/src/sampleseek.yaml";
         }
 
         // load config file

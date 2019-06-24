@@ -3,39 +3,168 @@ serverConfig:
   port: 8080
 
 dbConfig:
-  url: jdbc:postgresql://localhost/pinmap
-  username: postgres
-  password: pinmap
+  url: jdbc:postgresql://localhost/postgres
+  username: josephzheng
+  password: postgres
 
 sampleConfig:
-  baseTableName: tweets1
+  baseTableName: ftweets
   baseTableColumnNames:
-    - id
     - create_at
+    - id
+    - text
     - x
     - y
-  baseTableSize: 1026036
-  sampleTableName: s_tweets1
+    - in_reply_to_status
+    - in_reply_to_user
+    - favorite_count
+    - retweet_count
+    - lang
+    - user_id
+    - user_name
+    - user_screen_name
+    - user_profile_image_url
+    - user_lang
+    - user_location
+    - user_create_at
+    - user_description
+    - user_followers_count
+    - user_friends_count
+    - user_statues_count
+    - place_country
+    - place_country_code
+    - place_full_name
+    - place_id
+    - place_name
+    - place_place_type
+    - geo_tag_state_id
+    - geo_tag_state_name
+    - geo_tag_county_id
+    - geo_tag_county_name
+    - geo_tag_city_id
+    - geo_tag_city_name
+
+  baseTableSize: 1000000
+  sampleTableName: s_ftweets
   sampleTableColumnNames:
-    - id
     - create_at
+    - id
+    - text
     - x
     - y
+    - in_reply_to_status
+    - in_reply_to_user
+    - favorite_count
+    - retweet_count
+    - lang
+    - user_id
+    - user_name
+    - user_screen_name
+    - user_profile_image_url
+    - user_lang
+    - user_location
+    - user_create_at
+    - user_description
+    - user_followers_count
+    - user_friends_count
+    - user_statues_count
+    - place_country
+    - place_country_code
+    - place_full_name
+    - place_id
+    - place_name
+    - place_place_type
+    - geo_tag_state_id
+    - geo_tag_state_name
+    - geo_tag_county_id
+    - geo_tag_county_name
+    - geo_tag_city_id
+    - geo_tag_city_name
   sampleTableColumnTypes:
-    - bigint
     - timestamp
+    - bigint
+    - text
     - double
     - double
+    - bigint
+    - bigint
+    - bigint
+    - bigint
+    - text
+    - bigint
+    - text
+    - text
+    - text
+    - text
+    - text
+    - timestamp
+    - text
+    - bigint
+    - bigint
+    - bigint
+    - text
+    - text
+    - text
+    - text
+    - text
+    - text
+    - bigint
+    - text
+    - bigint
+    - text
+    - bigint
+    - text
 
 seekConfig:
   pkey: id
   measures:
+    - text
     - x
     - y
+    - lang
+    - user_name
+    - user_screen_name
+    - user_profile_image_url
+    - user_lang
+    - user_location
+    - user_description
+    - place_country
+    - place_country_code
+    - place_full_name
+    - place_id
+    - place_name
+    - place_place_type
+    - geo_tag_state_name
+    - geo_tag_county_name
+    - geo_tag_city_name
   dimensions:
-    - id
     - create_at
+    - id
+    - in_reply_to_status
+    - in_reply_to_user
+    - favorite_count
+    - retweet_count
+    - user_id
+    - user_create_at
+    - user_followers_count
+    - user_friends_count
+    - user_statues_count
+    - geo_tag_state_id
+    - geo_tag_county_id
+    - geo_tag_city_id
   dimensionTypes:
+    - NUMERICAL
+    - NUMERICAL
+    - NUMERICAL
+    - NUMERICAL
+    - NUMERICAL
+    - NUMERICAL
+    - NUMERICAL
+    - NUMERICAL
+    - NUMERICAL
+    - NUMERICAL
+    - NUMERICAL
+    - NUMERICAL
     - NUMERICAL
     - NUMERICAL
   epsilon: 0.05
